@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const nav = document.querySelector('a:nth-of-type(1)')
+const nav = document.querySelector('a')
 nav.textContent ="Services"
 const nav2 = nav.nextElementSibling
 nav2.textContent ="Product"
@@ -53,6 +53,22 @@ const nav5 = nav4.nextElementSibling
 nav5.textContent ="About"
 const nav6 = nav5.nextElementSibling
 nav6.textContent ="Element"
+
+
+
+const nav7 = document.querySelector('nav');
+const addElement = document.createElement('a')
+addElement.textContent = 'GoodJob'
+
+addElement.setAttribute('href','#')
+nav7.appendChild(addElement)
+
+const nav8 = document.querySelector('nav');
+const addElement2 = document.createElement('a')
+addElement2.textContent = 'Look Here'
+nav8.prepend(addElement2)
+addElement2.setAttribute('href', '#')
+
 
 // const nav7 = nav.appendChild(document.createElement(‘a’));
 // nav7.href=‘#’;
@@ -72,35 +88,37 @@ for (let i =0; i < allLinks.length; i++){
 }
 
 const header = document.querySelector('h1')
-header.textContent = 'Dom is Awesome'
+header.innerHTML = 'Dom <br> is <br> Awesome'
 const button = document.querySelector ('button')
 button.textContent = 'Get Started'
 
 const snippet = document.querySelector('.cta #cta-img' )
 snippet.src = "img/header-img.png"
 
-const paragraph = document.querySelector ('.top-content .text-content p:nth-of-type(1)')
-paragraph.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+const paragraph = document.querySelectorAll ('.text-content p')
+paragraph[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+console.log(paragraph)
 
-const paragraph2 = document.querySelector ('.top-content .text-content p:nth-of-type(2)')
-paragraph2.textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+paragraph[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
 const middleImg = document.querySelector ('.middle-img')
 middleImg.src = 'img/mid-page-accent.jpg'
 
+paragraph[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis'
 
-const paragraph3 = document.querySelector ('.bottom-content .text-content p:nth-of-type(1)')
-paragraph3.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis'
+paragraph[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
-const paragraph4 = document.querySelector ('.bottom-content .text-content p:nth-of-type(2)')
-paragraph4.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+paragraph[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
-const paragraph5 = document.querySelector ('.bottom-content .text-content p:nth-of-type(3)')
-paragraph5.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+// const h4tc = document.querySelectorAll ('.text-content h4')
+// h4tc[0].textContent = 'Features'
 
-
-
-
+const h4Middle= document.querySelectorAll('.text-content h4')
+h4Middle[0].textContent = 'Features'
+h4Middle[1].textContent = 'About'
+h4Middle[2].textContent= 'Services'
+h4Middle[3].textContent ='Product'
+h4Middle[4].textContent = 'Vision'
 
 
 const h4contact = document.querySelector('.contact h4' )
@@ -108,7 +126,7 @@ h4contact.textContent = "Contact"
 
 
 const add1 = document.querySelector('.contact p:nth-of-type(1)')
-add1.innerHTML ='123 Way 456 Street Somewhere, USA'
+add1.innerHTML ='123 Way 456 <br> Street Somewhere, USA'
 const add2 = add1.nextElementSibling
 add2.textContent ="1(888) 888-8888"
 const add3 = add2.nextElementSibling
@@ -126,7 +144,7 @@ footer.textContent = 'Copyright Great Idea! 2018'
 // const h4tc = document.querySelectorAll('.top-content .text-content h4')
 // // h4tc.textContent = "Features"
 
-const h4tc = document.querySelectorAll('.text-content h4');
+const h4tc = document.querySelectorAll('h4');
 
 console.log(h4tc)
 
